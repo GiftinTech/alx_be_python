@@ -5,5 +5,5 @@ hours = 2
 seconds = (60 * 60) * hours
 
 
-# Print results
+# Print result
 print(hours, 'hours(s) is', seconds, 'seconds.')
