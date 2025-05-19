@@ -2,7 +2,8 @@
 hours = 2
 
 # Calculate the number of seconds in hours
-seconds = (60 * 60) * hours
+# seconds = (60 * 60) * hours
+seconds = 3600 * hours
 
 
 # Print result
