@@ -1,14 +1,14 @@
 # Get user financial details
-getIncome = int(input('Enter your monthly income:'))
-getTotalExpenses = int(input('Enter your total monthly expenses:'))
+monthly_income = int(input('Enter your monthly income:'))
+monthly_expenses = int(input('Enter your total monthly expenses:'))
 
 # Calculate monthly savings
-monthlySavings = getIncome - getTotalExpenses
+monthly_savings = monthly_income - monthly_expenses
 
 # Project annual savings
-annualInterest = 0.05
-projectedSavings = monthlySavings * 12 + (monthlySavings * 12 * annualInterest)
+annual_interest = 0.05
+projected_savings = monthly_savings * 12 + (monthly_savings * 12 * annual_interest)
 
 # Print results
-print(f'Your monthly savings are ${monthlySavings}.')
-print(f'Projected savings after one year, with interest, is: ${projectedSavings}.')
+print(f'Your monthly savings are ${monthly_savings}.')
+print(f'Projected savings after one year, with interest, is: ${round(projected_savings)}.')
