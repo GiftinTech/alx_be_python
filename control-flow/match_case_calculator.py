@@ -3,18 +3,22 @@ num1 = int(input('Enter the first number: '))
 num2 = int(input('Enter the second number: '))
 operation_type = (input('Choose the operation (+, -, *, /): '))
 
+result = 0
+
 # Perform calculation
 match operation_type:
   case '+':
-    print(f'The result is {num1 + num2}.')
+   result = num1 + num2
   case '-':
-    print(f'The result is {num1 - num2}.')
+   result = num1 - num2
   case '*': 
-    print(f'The result is {num1 * num2}.')
+   result = num1 * num2
   case '/':
     if num1 and num2 != 0:
-      print(f'The result is {num1 / num2}.')
+     result = num1 / num2
     else:
-      print('Cannot divide by zero.')
+     result = 'Cannot divide by zero'
   case _:
-    print('Error: Invalid operation.')
+    result = 'Error: Invalid operation'
+
+print(f'The result is {result}.')
