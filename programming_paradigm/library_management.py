@@ -31,17 +31,21 @@ class Library:
   
   def check_out_book(self, title):
     for book in self.__books:
-      if book.check_out():
-        print(f"Checked out '{title}'")
-      else:
-        print(f"'{title}' is already checked out.")
-        return
+      if book.title == title:
+        if book.check_out():
+          print(f"Checked out '{title}'")
+        else:
+          print(f"'{title}' is already checked out.")
+          return
     print(f"'{title}' not found in library.")
 
   def return_book(self, title):
     for book in self.__books:
       if book.title == title:
         if book.return_book():
+          print(f"Returned '{title}'.")
+          return
+        else:
           print(f"'{title}' was not checked out.")
           return
     print(f"'{title}' not found in the library.")
